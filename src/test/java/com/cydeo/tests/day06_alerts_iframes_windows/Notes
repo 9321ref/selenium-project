@@ -1,0 +1,143 @@
+- Today's schedule:
+    - Review / Mock interview
+    - Task#1
+    - XPath review + additional functionality
+    - Webtables
+    - Utility methods
+    - More tasks
+
+------------------------------------------------------------------------------------
+DROPDOWNS
+
+- How do you handle dropdowns?
+    - Basically, I would first inspect the dropdown itself to determine what type of dropdown it is.
+    - If it is an HTML dropdown (Non-select) I can just locate it as any other web element, and just click to it.
+    - If it is a <select> dropdown, I will use the "Select" class coming from Selenium to handle it.
+
+- How do we get all of the options from a Select dropdown?
+    - .getOptions() method;
+
+- What is the return type?
+    - List<WebElement>
+
+- How do we get currently selected option?
+    - .getFirstSelectedOption();
+    - This method can be used to get the currently selected option.
+    - It means we can get the default selected value, but also we can change the option, and get whatever is currently selected as well.
+
+- What is the return type?
+    - It returns the currently selected option as a WebElement
+
+- How do we select options from a Select dropdown?
+    - We have 3 ways to select from a dropdown.
+
+    #1- selectByVisibleText : selects by the visible text of the option
+    #2- selectByIndex         : selects by the index order of the option. indexes start from 0.
+    #3- selectByValue        : selects using the value of the attribute "value"
+
+
+- Syntax of how do we handle Select dropdown?
+
+#1- Initially I would create the object of the Select class.
+#2- I would locate the dropdown, and pass it in the constructor.
+
+    Select dropdown = new Select(driver.findElement(By.LOCATOR("locator")));
+
+#3- I can now use the object to do any action on the dropdown itself.
+
+    dropdown.getOptions();
+    dropdown.selectByVisibleText();
+
+
+   - Today's schedule:
+       - Review / Mock interview
+       - Task#1
+       - XPath review + additional functionality
+       - Webtables
+       - Utility methods
+       - More tasks
+
+   ------------------------------------------------------------------------------------
+   DROPDOWNS
+
+   - How do you handle dropdowns?
+       - Basically, I would first inspect the dropdown itself to determine what type of dropdown it is.
+       - If it is an HTML dropdown (Non-select) I can just locate it as any other web element, and just click to it.
+       - If it is a <select> dropdown, I will use the "Select" class coming from Selenium to handle it.
+
+   - How do we get all of the options from a Select dropdown?
+       - .getOptions() method;
+
+   - What is the return type?
+       - List<WebElement>
+
+   - How do we get currently selected option?
+       - .getFirstSelectedOption();
+       - This method can be used to get the currently selected option.
+       - It means we can get the default selected value, but also we can change the option, and get whatever is currently selected as well.
+
+   - What is the return type?
+       - It returns the currently selected option as a WebElement
+
+   - How do we select options from a Select dropdown?
+       - We have 3 ways to select from a dropdown.
+
+       #1- selectByVisibleText : selects by the visible text of the option
+       #2- selectByIndex         : selects by the index order of the option. indexes start from 0.
+       #3- selectByValue        : selects using the value of the attribute "value"
+
+
+   - Syntax of how do we handle Select dropdown?
+
+   #1- Initially I would create the object of the Select class.
+   #2- I would locate the dropdown, and pass it in the constructor.
+
+       Select dropdown = new Select(driver.findElement(By.LOCATOR("locator")));
+
+   #3- I can now use the object to do any action on the dropdown itself.
+
+       dropdown.getOptions();
+       dropdown.selectByVisibleText();
+
+   ------------------------------------------------------------------------------------
+   ALERTS
+
+   - What is an alert?
+       - Some pop-ups happening on the page.
+       - Developers use different types of alerts to get the attention of the user to some specific thing on the screen.
+
+   - How many types of alerts do we have?
+       - 2 types of alerts.
+
+       #1- HTML Alerts (Non-JS Alerts)
+           - HTML Alerts are part o the HTML code.
+           - We can inspect, locate, and click to handle them.
+           - There is nothing special about these alerts.
+           - Most of the time, they won't even block the rest of the page.
+
+       #2- JS Alerts
+           - JS Alerts are not part of the HTML page.
+           - It means, we can NOT inspect to locate them.
+           - We have to use the "Alert" from Selenium library.
+           - JS Alerts must be handled, otherwise they won't let user to click to anywhere on the page.
+
+   - How many types of JS Alerts we have?
+       #1- Information/Warning Alert
+           - User can ONLY accept the alert.
+
+       #2- Confirmation Alert
+           - User can ACCEPT and DECLINE.
+
+       #3- Prompt Alert
+           - User can ACCEPT, DECLINE, and send text before doing actions.
+
+
+   - How do we handle Alerts using Selenium?
+       - I handle alerts using Alert coming from Selenium library.
+
+       syntax: Alert alert = driver.switchTo().alert();
+
+       alert.accept();
+       alert.decline();
+       alert.sendKeys("string");
+
