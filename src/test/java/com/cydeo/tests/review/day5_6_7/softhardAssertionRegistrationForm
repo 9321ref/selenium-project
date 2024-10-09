@@ -1,0 +1,25 @@
+Hard assertion (sert doğrulama) kullanıldığında, bir assertion başarısız olursa, diğer assertion'lar çalışmaz.
+Yani, testte bir assertion başarısız olduğu anda, testin çalışması durdurulur ve sonraki doğrulamalar yürütülmez.
+
+
+Eğer soft assertion kullanıyorsanız, bir assertion başarısız olsa bile diğer assertion'lar çalışmaya devam eder.
+Soft assertion'lar, tüm doğrulamaları yürütür ve test tamamlandığında tüm hataları bir arada raporlar.
+
+Soft assertion, genellikle TestNG gibi çerçevelerde kullanılır. JUnit'de varsayılan olarak soft assertion yoktur,
+ancak TestNG gibi framework'lerde aşağıdaki gibi soft assertion uygulanabilir.
+
+
+SoftAssert kullanırken softAssert.assertAll() kullanmak, yalnızca softAssert.
+assertEquals() veya diğer doğrulama yöntemlerini kullanmaktan farklıdır. İşte bu farkın nasıl çalıştığını açıklayayım:
+---------------------------------------------------------------
+softAssert.assertAll() Kullanımının Davranışı:
+
+assertAll() olmadan: Eğer softAssert.assertAll() metodunu çağırmazsanız,
+test sırasında bir doğrulama başarısız olsa bile TestNG bu hataları raporlamaz.
+softAssert.assertEquals() başarısızlıkları sadece kaydeder, ancak bu durum testi durdurmaz veya bir hata fırlatmaz.
+Bu yüzden test, doğrulama hatası olmasına rağmen başarılı olarak raporlanabilir.
+----------------------------------------------------------------
+assertAll() ile: Testin sonunda softAssert.assertAll() metodunu çağırdığınızda,
+test sırasında kaydedilen tüm hatalar değerlendirilir ve raporlanır.
+assertAll() tüm başarısız olan doğrulamaları toplar ve bunların özetini içeren bir istisna fırlatır.
+Bu, testin başarısız olarak işaretlenmesine ve tüm hataların raporlanmasına neden olur.

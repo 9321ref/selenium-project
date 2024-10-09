@@ -26,7 +26,7 @@ public class T5_WindowsPractice {
         driver.get("https://practice.cydeo.com/windows");
     }
 
-    public void tearDropDown(){
+    public void tearDownMethod(){
         driver.close();
     }
 

@@ -1,0 +1,53 @@
+
+day1,2,3,4 Live class practices:
+
+
+ // TC#1: Navigations and Get methods Practice
+
+      // 1. Open a chrome browser
+      // 2. Go to: https://practice.expandtesting.com/
+      // 3. Click on "Automation Training"
+      // 4. Verify url contains "formations"
+      // 5. Navigate back, forward and refresh
+      // 6. Click on "Practice Site"
+      // 7. Verify title is "Automation Testing Practice Website for UI and API"
+
+
+--------------------
+
+
+ // TC#2: Practice page Login test
+
+    // 1. Open Chrome browser
+    // 2. Go to https://practice.cydeo.com/login
+    // 3. Enter username: "tomsmith"
+    // 4. Enter password: "SuperSecretPassword"
+    // 5. Click to Login button
+    // 6. Verify text displayed on page contains
+    //    Expected: "You logged into a secure area!"
+
+
+----------------------
+
+// TC#3: Registration Form Page Testing
+
+    // 1. Open Chrome browser
+    // 2. Go to https://practice.cydeo.com/registration_form
+    // 3. Verify title is as expected:
+    // Expected: "Registration Form"
+
+
+
+// TC#4: Registration Form Page Filling Form Test
+
+    // 1. Open Chrome browser
+    // 2. Go to https://practice.cydeo.com/registration_form
+    // 3. Enter First name: "John"
+    // 4. Enter Last name: "Smith"
+    // 5. Enter Username: "johnsmith123"
+    // 6. Enter Email address: "john.smith@email.com"
+    // 7. Enter password: "John1234"
+    // 8. Enter Phone number: "123-456-7890"
+    // 9. Click to "Male" from Gender
+    // 10. Enter Date of birth "01/28/1990"
+    // 11. Click to "Java" from languages
