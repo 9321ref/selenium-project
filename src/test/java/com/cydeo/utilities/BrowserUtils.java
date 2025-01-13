@@ -1,5 +1,6 @@
 package com.cydeo.utilities;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
@@ -60,7 +61,24 @@ public class BrowserUtils {
         Assert.assertTrue(driver.getTitle().contains(expectedInTitle)); //getTitle -> actualTitle
 
     }
+
+    //utilities method should be static why?
+//we can call with class name
+//this code will work for just Radio Buttons:
+//    public static void clickOption(){
+//        driver.findElement(By.linkText("Radio Buttons")).click();
+//    }
+//first fix WebDriver driver
+//then for all elements my linktext should be common which is string all the elements' text:
+
+    public static void clickOption(WebDriver driver,String option){
+        driver.findElement(By.linkText(option)).click();
+    }
+
 }
+
+
+
 
 
 /*

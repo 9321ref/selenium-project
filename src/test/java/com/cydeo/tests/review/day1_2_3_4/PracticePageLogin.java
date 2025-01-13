@@ -37,7 +37,7 @@ public class PracticePageLogin {
         //    Expected: "You logged into a secure area!"
         //WebElement msg1 = driver.findElement(By.id("flash"));
        // WebElement msg2 = driver.findElement(By.className("flash success")); // doesn't work because there is space.you can use instead of it xpath or css locator
-        WebElement msg3 = driver.findElement(By.xpath("//div[normalize-space(text())='You logged into a secure area!']"));
+        WebElement msg3 = driver.findElement(By.xpath("//div[normalize-space(text())='You logged into a secure area!']")); // normalize-space is used for :eger bosluk varsa yada farkli bi yazim sekli.text()methoduyla kullanilir
        // WebElement msg4 = driver.findElement(By.cssSelector("div#flash")); //# css icin kullanilir
        // WebElement msg5 = driver.findElement(By.xpath("//div[@id='flash']"));
 
